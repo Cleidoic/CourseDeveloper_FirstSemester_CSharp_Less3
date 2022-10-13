@@ -56,15 +56,16 @@ A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53
 */
 
-double Distance () {
+double Distance (int A_x, int A_y, int A_z, int B_x, int B_y, int B_z) {
 
     double result = 0;
-
-    return result;
+    result = Math.Sqrt(Math.Pow((A_x - B_x), 2) + 
+    Math.Pow((A_y - B_y), 2) + Math.Pow((A_z - B_z), 2));
+    return Math.Round(result, 2);
 
 }
 
-Distance();
+Console.WriteLine(Distance(7, -5, 0, 1, -1, 9));
 
 /*
 Задача 3:
